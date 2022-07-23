@@ -13,7 +13,7 @@ from database.sql import add_user, query_msg, full_userbase
 
 #=====================================================================================##
 
-WAIT_MSG = """"<b>Processing ...</b>"""
+WAIT_MSG = """"<b>Aguarde ...</b>"""
 
 REPLY_ERROR = """<code>Use this command as a replay to any telegram message with out any spaces.</code>"""
 
@@ -89,9 +89,9 @@ async def start_command(client: Client, message: Message):
     else:
         reply_markup = InlineKeyboardMarkup(
             [
-                [
-                    InlineKeyboardButton("😊 About Me", callback_data = "about"),
-                    InlineKeyboardButton("🔒 Close", callback_data = "close")
+                [ 
+                   InlineKeyboardButton("🎬 Canal Principal", url = "https://t.me/PortalPipocaFlix"),
+                    InlineKeyboardButton("🔒 Fechar", callback_data = "close")
                 ]
             ]
         )
@@ -114,7 +114,7 @@ async def not_joined(client: Client, message: Message):
     buttons = [
         [
             InlineKeyboardButton(
-                "Join Channel",
+                "🍿 Entrar no Canal 🍿",
                 url = client.invitelink)
         ]
     ]
@@ -122,7 +122,7 @@ async def not_joined(client: Client, message: Message):
         buttons.append(
             [
                 InlineKeyboardButton(
-                    text = 'Try Again',
+                    text = ' 🔄 Assistir Novamente 🔄',
                     url = f"https://t.me/{client.username}?start={message.command[1]}"
                 )
             ]
