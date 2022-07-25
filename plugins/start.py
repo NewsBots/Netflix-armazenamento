@@ -90,7 +90,7 @@ async def start_command(client: Client, message: Message):
         reply_markup = InlineKeyboardMarkup(
             [
                 [ 
-                   InlineKeyboardButton("🗂 Catálogo do Bot 🗂", url = "https://t.me/PortalPipocaFlix")
+                   InlineKeyboardButton("🍿| Entre no Canal OFICIAL", url = "https://t.me/PortalPipocaFlix")
                 ]
             ]
         )
@@ -113,7 +113,7 @@ async def not_joined(client: Client, message: Message):
     buttons = [
         [
             InlineKeyboardButton(
-                "🍿 Entrar no Canal 🍿",
+                "🍿| Entrar no Canal",
                 url = client.invitelink)
         ]
     ]
@@ -121,7 +121,7 @@ async def not_joined(client: Client, message: Message):
         buttons.append(
             [
                 InlineKeyboardButton(
-                    text = ' 🔄 Assistir Novamente 🔄',
+                    text = ' 🔄| Assistir Novamente',
                     url = f"https://t.me/{client.username}?start={message.command[1]}"
                 )
             ]
