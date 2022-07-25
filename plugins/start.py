@@ -90,7 +90,7 @@ async def start_command(client: Client, message: Message):
         reply_markup = InlineKeyboardMarkup(
             [
                 [ 
-                   InlineKeyboardButton("Canal Oficial", url = "https://t.me/BaixarFilmesESeriesMP4")
+                   InlineKeyboardButton("Canal Oficial", url = "https://t.me/nextflixcanalnovo")
                 ]
             ]
         )
